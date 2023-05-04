@@ -26,15 +26,20 @@ var isButtonDisable=  checkIsHave(id);
         <div>
             <CardGroup>
       <Card >
-      
-        <Card.Img className=" top" src={recipeImage} />
-        <p>{chefName}</p>
-        <h3 className='btn btn-primary' >{recipes}</h3>
+       <img className=" top w-80 h-50 p-4" src={recipeImage}  alt="" />
+        
+        <h3 className='text-center'>{chefName}</h3>
+        <Card.Title className='ps-4'>{recipeName}</Card.Title>
+       
+        <p className='p-4'> <span>Ingredients:</span> {ingredients}</p>
+        <p className='p-4'>CookingMethod: {cookingMethod}</p>
+        <p className='p-4'>Description: {description}</p>
+        <p className='p-4'>Rating: {rating}</p>
         <Card.Body>
-          <Card.Title>{recipeName}</Card.Title>
+          
          
         </Card.Body>
-        <Button disabled={isButtonDisable}  onClick={handleSaveLocalStorage} className="btn-secondary">Favorite Recipe</Button>
+        <Button disabled={isButtonDisable}  onClick={handleSaveLocalStorage} className="btn-secondary mb-2">Favorite Recipe</Button>
       </Card>
      
     </CardGroup>

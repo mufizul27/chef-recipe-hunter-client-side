@@ -20,7 +20,7 @@ const Header = () => {
   console.log(user);
     return (
         <Container ref={ref}>
-  <Navbar className='mt-4' bg="light" expand="lg" >
+  <Navbar className='mt-4 ' bg="light" expand="lg" >
       <Container>
         <Navbar.Brand   href="#home">Bangladeshi Foods Item</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -31,7 +31,10 @@ const Header = () => {
             <Nav.Link as={Link} to="/blog">Blog</Nav.Link>
           </Nav>
           {
-            user && <img height={60} className='profileImage' src={user.photoURL} alt="" />
+            user && <div className='img__wrap'>
+              <img height={60} className='profileImage' src={user.photoURL} alt="" />
+              <p className="img__description">{user.displayName}</p>
+            </div>
           }
         </Navbar.Collapse>
         
@@ -45,8 +48,7 @@ const Header = () => {
 
    
     <Outlet></Outlet>
-    <DeliciousFood></DeliciousFood>
-    <PopularFood></PopularFood>
+   
     <Footer></Footer>
 
     {location.pathname=='/blog'&& <div className='mb-4 d-flex align-items-center justify-content-center'>

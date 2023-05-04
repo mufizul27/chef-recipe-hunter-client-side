@@ -1,6 +1,27 @@
-.profileImage{
-    border-radius: 40px;
-    border: 3px solid cornflowerblue;
-    margin-right: 10px;
+.profileImage {
+  border-radius: 40px;
+  border: 3px solid cornflowerblue;
+  margin-right: 10px;
+}
 
+.img__wrap {
+  height: 60px;
+  width: 80px;
+}
+
+.img__description {
+    text-align: center;
+    font-size: 10px;
+  color: white;
+  visibility: hidden;
+  opacity: 0;
+  background-color: aqua;
+  border-radius: 20px;
+  /* transition effect. not necessary */
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.img__wrap:hover .img__description {
+  visibility: visible;
+  opacity: 1;
 }
