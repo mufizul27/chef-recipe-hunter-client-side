@@ -120,7 +120,7 @@ const Register = () => {
           <div className="col-md-6">
             <img
               className="w-100"
-              src="https://i.ibb.co/Vmyggr3/undraw-Login-re-4vu2.png"
+              src="https://i.ibb.co/rsmccVC/Top-25-most-popular-foods-in-Bangladesh.png"
               alt=""
             />
           </div>
