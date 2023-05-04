@@ -10,6 +10,7 @@ import Pdf from "react-to-pdf";
 import DeliciousFood from '../DeliciousFood/DeliciousFood';
 import PopularFood from '../PopularFood/PopularFood';
 import Footer from '../Footer/Footer';
+import ErrorPage from '../ErrorPage/ErrorPage';
 const ref = React.createRef();
 
 const Header = () => {
@@ -50,6 +51,7 @@ const Header = () => {
     <Outlet></Outlet>
    
     <Footer></Footer>
+   
 
     {location.pathname=='/blog'&& <div className='mb-4 d-flex align-items-center justify-content-center'>
       
