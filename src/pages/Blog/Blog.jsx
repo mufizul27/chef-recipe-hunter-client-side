@@ -58,7 +58,7 @@ In summary, Node.js is a runtime environment for executing JavaScript code on th
 
         Custom hooks are also useful for abstracting complex logic and making it easier to test. By extracting the logic into a custom hook, developers can write tests for the hook function and ensure that it works as expected across different components.
 
-        To create a custom hook in React, simply create a function that uses one or more of the built-in hooks (like useState, useEffect, useContext, etc.) to provide a specific functionality or behavior. Then, export the function and use it in any component where you want to reuse the functionality.
+        To create a custom hook in React, simply create a function that uses one or more of the built-in hooks (like useState, useEffect, useContext, etc.) to provide a specific functionality or behavior. Then, export the function and use it in any component where you want to reuse the functionality 
                 </p>
 
             </div>
