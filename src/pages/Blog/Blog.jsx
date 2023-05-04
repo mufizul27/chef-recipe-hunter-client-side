@@ -11,55 +11,54 @@ const Blog = () => {
         <div className='Question-one mt-20 ms-60 me-32' >
             
             <div className='AllQuestionDesign' >
-                <h2 className='text-2xl' >1.When should you use context API?</h2>
+                <h2 className='text-2xl' >1.Tell us the differences between uncontrolled and controlled components?</h2>
                 <p className='Question-one'>
-                
-                   Context is primarily used when some data needs to be accessible by many   components at different nesting levels. Apply it sparingly because it makes component reuse more difficult. If you only want to avoid passing some props through many levels, component composition is often a simpler solution than context
-                    When passing props down multiple levels becomes difficult and cumbersome.
-                    When you need to share data across multiple components that are not in a parent-child relationship.When you have a large application with many components that need access to the same data.When you need to avoid prop drilling and keep your code clean and readable.However, it's important to note that overusing the Context API can make your code harder to understand and maintain. So, you should carefully consider whether Context API is the right solution for your particular use case. 
+                Controlled components are those that have their state managed by the applications code. In other words, the application is responsible for maintaining and updating the state of the component. Typically, this involves passing in a value to the component and then handling any changes to that value via callbacks or event handlers. Because the application has full control over the components state, it can ensure that the component behaves predictably and consistently.
+
+                Uncontrolled components, on the other hand, manage their own state internally. The application can still interact with them by setting initial values or attaching event listeners, but the component is ultimately responsible for managing its own state. This can be useful for simpler components where the overhead of managing state externally isnt worth it, but it can also lead to more unpredictable behavior if the components internal state isnt properly managed.
+
+                In summary, controlled components give the application more control over the behavior and state of a user interface element, while uncontrolled components leave more responsibility to the component itself.
+                                
                     
                     
                 </p>
 
 
 
-                <h2 className='text-2xl'> 2.What is a custom hook?</h2>
+                <h2 className='text-2xl'> 2.How to validate React props using PropTypes?</h2>
 
                 <p className='Question-two '>
-                A custom hook in React is a JavaScript function that starts with the prefix and allows you to extract reusable logic from a component. It enables you to reuse stateful logic between components without using render props, higher-order components, or other complex patterns.
+                
+                Certainly! In React, components often receive props (short for properties) from their parent components. PropTypes is a package in React that provides a way to validate the type and presence of props passed to a component.
 
-                Custom hooks provide a way to encapsulate commonly used functionality that can be shared across multiple components. They are used to abstract away complex logic, reduce duplication, and promote code reusability.
+                To use PropTypes, you need to import it from the prop-types package at the beginning of your file. Then, you can define the PropTypes for your component by adding a static property called propTypes to your component function or class.
+                                </p>
 
-                A custom hook can use other built-in hooks, such as useState, useEffect, and useContext, to provide additional functionality to components. By creating custom hooks, developers can make their code more modular, easier to test, and less prone to bugs.
 
-                For example, a custom hook might encapsulate the logic for fetching data from an API and storing it in state. This hook could then be used in multiple co
+
+                <h2 className='Question-three text-2xl'>3.Tell us the difference between nodejs and express js.?</h2>
+
+                <p>
+                Node.js and Express.js are two popular technologies used for building web applications with JavaScript. While they are related, they serve different purposes and have distinct differences.
+
+Node.js is a runtime environment that allows developers to run JavaScript on the server-side. It provides a JavaScript runtime environment and a set of APIs that enable developers to build server-side applications using JavaScript. With Node.js, developers can build scalable, high-performance web applications that handle a large number of concurrent requests.
+
+On the other hand, Express.js is a web application framework built on top of Node.js. It provides a set of features and tools for building web applications, such as routing, middleware, and template rendering. Express.js is designed to make it easier to build web applications with Node.js by providing a simpler and more streamlined interface for handling HTTP requests and responses.
+
+In summary, Node.js is a runtime environment for executing JavaScript code on the server-side, while Express.js is a web application framework built on top of Node.js that provides a set of features and tools for building web applications. Express.js simplifies the process of building web applications with Node.js by providing a higher-level abstraction over the low-level APIs provided by Node.js.
                 </p>
 
 
 
-                <h2 className='Question-three text-2xl'>3.What is useRef?</h2>
-
+                <h2 className='Question-four text-2xl '>4.What is a custom hook, and why will you create a custom hook?</h2>
                 <p>
-                In React, useRef is a hook that provides a way to store and access mutable values that persist between renders. It returns a mutable ref object that can hold any value, similar to the ref object used in class components.
+                In React, a custom hook is a function that uses the built-in hooks (like useState, useEffect, useContext, etc.) to provide a specific functionality or behavior that can be reused across different components. Custom hooks allow developers to extract and share common logic between components without having to repeat code.
 
-                The most common use case for useRef is to access the DOM nodes or elements in the component. When a ref is attached to a component, the ref object can be used to get a reference to the underlying DOM node or element. This allows you to manipulate the DOM directly, bypassing React's virtual DOM, and access properties or methods of the underlying DOM node.
+        Custom hooks are created to encapsulate specific functionalities and behaviors that are shared across different components. For example, a custom hook could be created to handle API calls, manage a forms state and validation, or handle user authentication. By creating a custom hook, developers can easily reuse the same functionality across different components, without having to rewrite the code.
 
-                Additionally, useRef can be used to store and access any other mutable value that needs to persist between renders, such as a timer ID or a value that needs to be accessed from within an event handler.
-                </p>
+        Custom hooks are also useful for abstracting complex logic and making it easier to test. By extracting the logic into a custom hook, developers can write tests for the hook function and ensure that it works as expected across different components.
 
-
-
-                <h2 className='Question-four text-2xl '>4.What is useMemo?</h2>
-                <p>
-                The useMemo hook in React is used to optimize the performance of functional components by caching the result of an expensive calculation. When a component re-renders, it may execute the same calculations again and again, even if the inputs to those calculations haven't changed. This can be a waste of resources, especially if the calculation is time-consuming.
-
-                The useMemo hook memoizes the result of the calculation, meaning that it stores the value in memory and only recalculates it if the inputs to the calculation change. If the inputs are the same as before, useMemo will return the cached value instead of re-executing the calculation. This can help to improve the performance of your application by avoiding unnecessary calculations.
-
-                To use useMemo, you pass in a function that performs the calculation and an array of dependencies that the calculation depends on. The hook will compare the current dependencies to the previous dependencies and only re-execute the calculation if they have changed. If they are the same, the cached value will be returned.
-
-                Overall, useMemo is a useful tool for optimizing the performance of React applications that have expensive calculations or complex logic.
-
-
+        To create a custom hook in React, simply create a function that uses one or more of the built-in hooks (like useState, useEffect, useContext, etc.) to provide a specific functionality or behavior. Then, export the function and use it in any component where you want to reuse the functionality.
                 </p>
 
             </div>
