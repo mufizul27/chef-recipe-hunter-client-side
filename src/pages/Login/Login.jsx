@@ -72,7 +72,7 @@ const Login = () => {
           <div className="col-md-6">
             <img
               className="w-100"
-              src="https://i.ibb.co/hYJTmVX/undraw-Mobile-login-re-9ntv-1.png"
+              src="https://i.ibb.co/gwJsMdj/Top-30-Food-in-Bangladesh.jpg"
               alt=""
             />
           </div>
