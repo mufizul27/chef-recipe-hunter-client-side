@@ -23,7 +23,7 @@ const Header = () => {
         <Container ref={ref}>
   <Navbar className='mt-4 ' bg="light" expand="lg" >
       <Container>
-        <Navbar.Brand   href="#home">Bangladeshi Foods Item</Navbar.Brand>
+        <Navbar.Brand   href="#home">Bangladeshi Village Food</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto gap-4">
