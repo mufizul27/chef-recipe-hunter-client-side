@@ -5,7 +5,7 @@ import { Card } from 'react-bootstrap';
 const PopularFood = () => {
     return (
         <div className='mb-4'>
-            <h1 className='text-center mt-4'>How it work?</h1>
+            <h1 className='text-center mt-4'>Bangladesh Different Type Recipe </h1>
 
             
             <div className='d-flex position-relative gap-4  grid grid-cols-3'>

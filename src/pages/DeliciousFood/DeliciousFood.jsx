@@ -5,7 +5,7 @@ import { Col, Container, Row } from "react-bootstrap";
 const DeliciousFood = () => {
   return (
     <div className="mt-4 text-center">
-      <h1>Categories</h1>
+      <h1>Different  Categories Meal In Bangladesh</h1>
       <h4>A large selection of dishes for cocking</h4>
       <div>
         <Container>
